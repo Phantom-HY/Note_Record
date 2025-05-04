@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义背景网页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 圆形控制按钮 -->
+    <button class="control-btn" onclick="toggleModal()">🎨</button>
+    
+    <!-- 背景设置弹窗 -->
+    <div class="modal" id="backgroundModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="toggleModal()">×</button>
+            <div class="control-group">
+                <h3>背景设置</h3>
+                
+                <label>纯 色 背 景：</label>
+                <input type="color" id="colorPicker">
+                
+                <label>图 片 背 景：</label>
+                <input type="file" id="imageUpload" accept="image/*">
+                
+                <label>渐 变 背 景：</label>
+                <div class="gradient-preview" id="gradientPreview"></div>
+                <button onclick="setRandomGradient()">随 机 渐 变</button>
+                
+                <button onclick="resetBackground()">重 置 背 景</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
